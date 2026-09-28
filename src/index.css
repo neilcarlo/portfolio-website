@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #070b14;
+  color: #eef2ff;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+::selection { background: rgba(99,102,241,.35); }
+* { box-sizing: border-box; }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+.glass {
+  background: rgba(12, 18, 32, .64);
+  border: 1px solid rgba(148,163,184,.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.light body { background: #f6f8fc; color: #0f172a; }
+.light .glass { background: rgba(255,255,255,.72); border-color: rgba(15,23,42,.09); }
+.light .muted { color: #475569; }
+.light .surface { background: #fff; border-color: rgba(15,23,42,.08); }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.grid-bg {
+  background-image: linear-gradient(rgba(148,163,184,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}

@@ -1,0 +1,7 @@
+import { experience } from "../data/portfolio";
+export default function Experience() {
+  return <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
+    <div className="reveal"><p className="mb-3 text-sm font-semibold uppercase tracking-[.2em] text-indigo-400">Experience</p><h2 className="text-4xl font-bold tracking-tight sm:text-5xl">A timeline you can make your own.</h2><p className="mt-4 max-w-2xl text-slate-400">Employment details are intentionally left editable until you provide the real information.</p></div>
+    <div className="relative mt-12 border-l border-white/10 pl-7">{experience.map((e,i)=><article key={i} className="reveal relative mb-10 last:mb-0"><span className="absolute -left-[34px] top-1.5 h-3 w-3 rounded-full border-2 border-indigo-300 bg-[#070b14]"/><div className="glass rounded-3xl p-6"><div className="flex flex-col justify-between gap-2 sm:flex-row"><div><h3 className="text-xl font-bold">{e.title}</h3><p className="mt-1 text-indigo-300">{e.company}</p></div><span className="text-sm text-slate-500">{e.dates}</span></div><ul className="mt-5 space-y-2 text-sm leading-6 text-slate-400">{e.responsibilities.map(x=><li key={x}>• {x}</li>)}</ul><div className="mt-5 flex flex-wrap gap-2">{e.technologies.map(x=><span key={x} className="rounded-lg border border-white/10 px-2.5 py-1 text-xs text-slate-400">{x}</span>)}</div></div></article>)}</div>
+  </section>;
+}
